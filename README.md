@@ -1,4 +1,4 @@
-#nf-loader
+# nf-loader
 Provides  methods for lazy and media-aware content loading.
 
 ### nfLoadAware
@@ -88,8 +88,16 @@ enquire.js is a lightweight, pure JavaScript library for responding to CSS media
 
 [http://wicky.nillia.ms/enquire.js/](http://wicky.nillia.ms/enquire.js/)
 
-#### waipoints
+LICENSE: [https://github.com/WickyNilliams/enquire.js/](https://github.com/WickyNilliams/enquire.js/)
+
+#### waypoints
 
 Waypoints is a jQuery plugin that makes it easy to execute a function whenever you scroll to an element.
 
 [http://imakewebthings.com/jquery-waypoints/](http://imakewebthings.com/jquery-waypoints/)
+
+LICENSE: [https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt](https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt)
+
+## License
+
+[MIT](https://github.com/front/nf-loader/blob/master/LICENSE)
