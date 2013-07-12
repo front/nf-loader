@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Scroll Demo</title>
+
+        <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <style>
+          div.navbar.stuck {
+            position: fixed;
+            top: 0;
+          }
+          div.infinite-loading {
+            background: #666;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px;
+            margin: 10px auto;
+            width: 300px;
+            text-align: center;
+          }
+        </style>
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="./jquery-waypoints-master/waypoints.js"></script>
+        <script type="text/javascript" src="./jquery-waypoints-master/shortcuts/infinite-scroll/waypoints-infinite.js"></script>
+        <script type="text/javascript" src="./jquery-waypoints-master/shortcuts/sticky-elements/waypoints-sticky.js"></script>
+        <script type="text/javascript" src="./unveil-master/jquery.unveil.js"></script>
+
+        <script type="text/javascript">
+          $(document).ready(function() {
+            $('.infinite-container').waypoint('infinite', {
+              container: 'auto',
+              items: '.infinite-item',
+              more: '.infinite-more-link',
+              offset: 'bottom-in-view',
+              loadingClass: 'infinite-loading',
+              onBeforePageLoad: function () {
+                alert('beforeLoad');
+              },
+              onAfterPageLoad: function () {
+                $("img").unveil();
+              }
+            });
+
+            $('div.navbar').waypoint('sticky');
+          });
+        </script>
+    </head>
+    <body>
+      <div class="container">
+        <h2 style="text-align: center;">Homer's Iliad</h2>
+        <div class="navbar">
+          <div class="navbar-inner">
+            <a class="brand" href="/">Waypoints Infinite Demo</a>
+          </div>
+        </div>
+        <div class="infinite-container"></div>
+        <a href="./res/book1.html" class="infinite-more-link">More</a>
+      </div>
+    </body>
+</html>
